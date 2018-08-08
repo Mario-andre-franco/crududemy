@@ -13,7 +13,7 @@ public class PedidoService {
 	@Autowired
 	private PedidoRepository repo; // automaticamente instanciado
 
-	public Pedido buscar(Integer id) {
+	public Pedido find(Integer id) {
 
 		
 		Pedido obj = repo.findOne(id); // busca a categoria no banco de dados e joga para o obj

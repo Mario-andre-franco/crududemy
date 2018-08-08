@@ -13,7 +13,7 @@ public class ClienteService {
 	@Autowired
 	private ClienteRepository repo; // automaticamente instanciado
 
-	public Cliente buscar(Integer id) {
+	public Cliente find(Integer id) {
 
 		
 		Cliente obj = repo.findOne(id); // busca a categoria no banco de dados e joga para o obj

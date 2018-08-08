@@ -23,7 +23,7 @@ public class PedidoResource {
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET) // OBTENDO DADO
 	public ResponseEntity<?> find(@PathVariable Integer id) {
 
-		Pedido obj = service.buscar(id);
+		Pedido obj = service.find(id);
 		return ResponseEntity.ok().body(obj); // resposta tera como corpo, o obj que foi buscado no banco de dados
 
 	}
