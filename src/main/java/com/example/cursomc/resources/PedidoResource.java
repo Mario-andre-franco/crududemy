@@ -10,20 +10,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.cursomc.domain.Cliente;
-import com.example.cursomc.services.ClienteService;
+import com.example.cursomc.domain.Pedido;
+import com.example.cursomc.services.PedidoService;
 
 @RestController
-@RequestMapping(value = "/clientes") // end point
-public class ClienteResource {
+@RequestMapping(value = "/pedidos") // end point
+public class PedidoResource {
 
 	@Autowired
-	private ClienteService service;
+	private PedidoService service;
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET) // OBTENDO DADO
 	public ResponseEntity<?> find(@PathVariable Integer id) {
 
-		Cliente obj = service.buscar(id);
+		Pedido obj = service.buscar(id);
 		return ResponseEntity.ok().body(obj); // resposta tera como corpo, o obj que foi buscado no banco de dados
 
 	}
