@@ -12,19 +12,19 @@ import com.example.cursomc.services.exceptions.ObjectNotFoundException;
 
 @ControllerAdvice
 public class ResourceExceptionHandler {
-	
-	@ExceptionHandler(ObjectNotFoundException.class) //tipo de exceção
+
+	@ExceptionHandler(ObjectNotFoundException.class) // tipo de exceção
 	public ResponseEntity<StandardErro> objectNotFound(ObjectNotFoundException e, HttpServletRequest request) {
-		
+
 		StandardErro err = new StandardErro(HttpStatus.NOT_FOUND.value(), e.getMessage(), System.currentTimeMillis());
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(err);
 	}
-	@ExceptionHandler(DataIntegrityEx.class) //tipo de exceção
+
+	@ExceptionHandler(DataIntegrityEx.class) // tipo de exceção
 	public ResponseEntity<StandardErro> dataIntegrity(DataIntegrityEx e, HttpServletRequest request) {
-		
+
 		StandardErro err = new StandardErro(HttpStatus.BAD_REQUEST.value(), e.getMessage(), System.currentTimeMillis());
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(err);
 	}
-
 
 }
