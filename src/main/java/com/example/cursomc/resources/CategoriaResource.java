@@ -23,7 +23,6 @@ import com.example.cursomc.dto.CategoriaDTO;
 import com.example.cursomc.services.CategoriaService;
 
 @RestController
-@EnableWebMvc
 @RequestMapping(value = "/categorias") // end point
 public class CategoriaResource {
 
