@@ -103,7 +103,7 @@ public class CursomcApplication implements CommandLineRunner {
 		estadoRepository.save(Arrays.asList(est1,est2)); //quem eu vou salvar no banco
 		cidadeRepository2.save(Arrays.asList(c1,c2,c3));
 		
-		Cliente cli1 = new Cliente(null,"Maria Silva", "maria@gmail.com","231313313",TipoCliente.PESSOFISICA);
+		Cliente cli1 = new Cliente(null,"Maria Silva", "maria@gmail.com","231313313",TipoCliente.PESSOAFISICA);
 		cli1.getTelefones().addAll(Arrays.asList("12312312312","123123131"));
 		
 		Endereco e1 = new Endereco(null,"Rua flores","teste","blabla","asdadada","1q23123123",cli1,c1);
